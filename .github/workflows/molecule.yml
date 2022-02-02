@@ -7,11 +7,12 @@ name: Ansible Molecule
 
 on:
   push:
-    tags_ignore:
+    tags-ignore:
       - '*'
   pull_request:
   schedule:
     - cron: '1 1 1 * *'
+  workflow_dispatch:
 
 jobs:
   lint:
@@ -33,8 +34,6 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - image: "fedora"
-            tag: "34"
           - image: "fedora"
             tag: "latest"
           - image: "fedora"
