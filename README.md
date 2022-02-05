@@ -4,7 +4,7 @@ Install atom on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/buluma/ansible-role-atom/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-atom/actions)|[![pipeline status](https://gitlab.com/buluma/ansible-role-atom/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-atom/-/commits/main)|[![quality](https://img.shields.io/ansible/quality/57873)](https://galaxy.ansible.com/buluma/atom)|[![downloads](https://img.shields.io/ansible/role/d/57873)](https://galaxy.ansible.com/buluma/atom)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-atom.svg)](https://github.com/buluma/ansible-role-atom/releases/)|
+|[![github](https://github.com/buluma/ansible-role-atom/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-atom/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-atom/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-atom)|[![quality](https://img.shields.io/ansible/quality/57873)](https://galaxy.ansible.com/buluma/atom)|[![downloads](https://img.shields.io/ansible/role/d/57873)](https://galaxy.ansible.com/buluma/atom)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-atom.svg)](https://github.com/buluma/ansible-role-atom/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -103,4 +103,4 @@ Apache-2.0
 
 ## [Author Information](#author-information)
 
-[Michael Buluma](https://buluma.co.ke/)
+[Michael Buluma](https://buluma.github.io/)
