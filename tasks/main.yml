@@ -14,10 +14,6 @@
     - atom_requirements is defined
     - ansible_pkg_mgr == "apt"
 
-- name: install crycptograghy
-  ansible.builtin.pip:
-    name: cryptography
-
 - name: download atom
   ansible.builtin.get_url:
     url: "{{ atom_package_url }}"
