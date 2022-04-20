@@ -4,7 +4,6 @@
 _atom_requirements:
   apt:
     - apt-transport-https
-    - cryptography
 
 atom_requirements: "{{ _atom_requirements[ansible_pkg_mgr] | default(omit) }}"
 
