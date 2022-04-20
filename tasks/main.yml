@@ -16,7 +16,7 @@
 
 - name: install crycptograghy
   ansible.builtin.pip:
-    url: cryptography
+    name: cryptography
 
 - name: download atom
   ansible.builtin.get_url:
