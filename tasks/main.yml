@@ -18,6 +18,7 @@
   ansible.builtin.get_url:
     url: "{{ atom_package_url }}"
     dest: "/tmp/{{ atom_package }}"
+    mode: 0644
     # checksum: "{{ atom_checksum }}"
     validate_certs: no
   when:
