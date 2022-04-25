@@ -1,16 +1,12 @@
 # Changelog
 
-## [v1.0.8](https://github.com/buluma/ansible-role-atom/tree/v1.0.8) (2022-03-29)
+## [2.0.0](https://github.com/buluma/ansible-role-atom/tree/2.0.0) (2022-04-24)
 
-[Full Changelog](https://github.com/buluma/ansible-role-atom/compare/v1.0.7...v1.0.8)
+[Full Changelog](https://github.com/buluma/ansible-role-atom/compare/1.0.6...2.0.0)
 
 **Merged pull requests:**
 
 - Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.3 to 1.0.4 [\#7](https://github.com/buluma/ansible-role-atom/pull/7) ([dependabot[bot]](https://github.com/apps/dependabot))
-
-## [v1.0.7](https://github.com/buluma/ansible-role-atom/tree/v1.0.7) (2022-03-23)
-
-[Full Changelog](https://github.com/buluma/ansible-role-atom/compare/1.0.6...v1.0.7)
 
 ## [1.0.6](https://github.com/buluma/ansible-role-atom/tree/1.0.6) (2022-03-20)
 
