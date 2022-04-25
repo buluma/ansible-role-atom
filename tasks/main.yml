@@ -54,9 +54,3 @@
     disable_gpg_check: yes
   when:
     - ansible_pkg_mgr == "zypper"
-
-- name: install apm packages
-  command:
-    cmd: apm install {{ item }}
-    creates: /root/.atom/packages/linter
-  loop: "{{ atom_apm_packages }}"
