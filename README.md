@@ -40,6 +40,12 @@ The default values for the variables are set in `defaults/main.yml`:
 ---
 # defaults file for atom
 
+# Atom release.
+atom_release: "1.60.0"
+
+# GitLab version.
+atom_version: "{{ _atom_version[atom_release] }}"
+
 # What apm packages (https://atom.io/packages) to install.
 atom_apm_packages:
   - linter
@@ -99,7 +105,7 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [Changelog](#changelog)
 
-[Role History](https://github.com/buluma/ansible-role-atom/blob/master/CHANGELOG.md)
+[Role History](https://github.com/buluma/ansible-role-atom/blob/main/CHANGELOG.md)
 
 ## [License](#license)
 
