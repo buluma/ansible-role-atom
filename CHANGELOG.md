@@ -1,8 +1,16 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-atom/tree/HEAD)
+## [2.0.2](https://github.com/buluma/ansible-role-atom/tree/2.0.2) (2022-05-09)
 
-[Full Changelog](https://github.com/buluma/ansible-role-atom/compare/2.0.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-atom/compare/2.0.1...2.0.2)
+
+**Merged pull requests:**
+
+- version bump [\#10](https://github.com/buluma/ansible-role-atom/pull/10) ([buluma](https://github.com/buluma))
+
+## [2.0.1](https://github.com/buluma/ansible-role-atom/tree/2.0.1) (2022-05-07)
+
+[Full Changelog](https://github.com/buluma/ansible-role-atom/compare/2.0.0...2.0.1)
 
 **Merged pull requests:**
 
