@@ -3,7 +3,6 @@
 # Ansible managed
 #
 exclude_paths:
-  - ./meta/exception.yml
   - ./meta/preferences.yml
   - ./molecule/default/prepare.yml
   - ./molecule/default/converge.yml
@@ -11,6 +10,5 @@ exclude_paths:
   - ./molecule/default/collections.yml
   - ./.tox
   - ./.cache
-
-skip_list:  # TODO: messes up install apm packages tasks step
-  - fqcn-builtins  # Use FQCN for builtin actions
+  - ./.github
+  - ./requirements.yml

@@ -5,4 +5,4 @@
 repository:
   description: Install atom on your system.
   homepage: https://buluma.github.io/
-  topics: atom, ide, ansible, molecule, tox, playbook, hacktoberfest
+  topics: atom, ide, ansible, molecule, tox, playbook
