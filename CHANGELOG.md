@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Bump buluma/molecule-action from 5.0.1 to 5.0.4 [\#17](https://github.com/buluma/ansible-role-atom/pull/17) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Rebuild EL8 [\#15](https://github.com/buluma/ansible-role-atom/pull/15) ([buluma](https://github.com/buluma))
 
 ## [2.0.4](https://github.com/buluma/ansible-role-atom/tree/2.0.4) (2022-09-11)
