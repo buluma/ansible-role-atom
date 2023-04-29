@@ -19,7 +19,6 @@
 
 **Merged pull requests:**
 
-- Bump buluma/molecule-action from 4.0.6 to 4.0.7 [\#12](https://github.com/buluma/ansible-role-atom/pull/12) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Molecule action update [\#11](https://github.com/buluma/ansible-role-atom/pull/11) ([buluma](https://github.com/buluma))
 
 ## [2.0.2](https://github.com/buluma/ansible-role-atom/tree/2.0.2) (2022-05-09)
@@ -36,6 +35,7 @@
 
 **Merged pull requests:**
 
+- Bump buluma/molecule-action from 4.0.6 to 4.0.7 [\#12](https://github.com/buluma/ansible-role-atom/pull/12) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.4 to 1.0.5 [\#9](https://github.com/buluma/ansible-role-atom/pull/9) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Testing [\#8](https://github.com/buluma/ansible-role-atom/pull/8) ([buluma](https://github.com/buluma))
 
