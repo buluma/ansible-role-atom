@@ -44,8 +44,13 @@ jobs:
             tag: "8"
           - image: "debian-systemd"
             tag: "latest"
+<<<<<<< HEAD
           - image: "debian-systemd"
             tag: "bullseye"
+=======
+          - image: "fedora-systemd"
+            tag: "36"
+>>>>>>> 38cbd9a96e4e8a500274ad71594e61319bf204ed
           - image: "fedora-systemd"
             tag: "37"
           - image: "fedora-systemd"
