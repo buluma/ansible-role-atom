@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.0.7](https://github.com/buluma/ansible-role-atom/tree/2.0.7) (2023-05-28)
+
+[Full Changelog](https://github.com/buluma/ansible-role-atom/compare/2.0.6...2.0.7)
+
 ## [2.0.6](https://github.com/buluma/ansible-role-atom/tree/2.0.6) (2023-05-05)
 
 [Full Changelog](https://github.com/buluma/ansible-role-atom/compare/2.0.5...2.0.6)
