@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-atom/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-atom/compare/2.0.7...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#25](https://github.com/buluma/ansible-role-atom/issues/25)
+- Update action [\#24](https://github.com/buluma/ansible-role-atom/issues/24)
+
 ## [2.0.7](https://github.com/buluma/ansible-role-atom/tree/2.0.7) (2023-05-28)
 
 [Full Changelog](https://github.com/buluma/ansible-role-atom/compare/2.0.6...2.0.7)
