@@ -1,4 +1,4 @@
-# [atom](#atom)
+# [Ansible role atom](#atom)
 
 Install atom on your system.
 
