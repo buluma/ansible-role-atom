@@ -14,8 +14,8 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 ---
 - name: Converge
   hosts: all
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
 
   roles:
     - role: buluma.atom
@@ -27,8 +27,8 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 ---
 - name: Prepare
   hosts: all
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: buluma.bootstrap
@@ -43,12 +43,6 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 ```yaml
 ---
 # defaults file for atom
-
-# Atom release.
-atom_release: "1.60.0"
-
-# GitLab version.
-atom_version: "{{ _atom_version[atom_release] }}"
 
 # What apm packages (https://atom.io/packages) to install.
 atom_apm_packages:
