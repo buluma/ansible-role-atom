@@ -5,7 +5,7 @@
   gather_facts: false
 
   tasks:
-    - name: check if atom exists works
+    - name: Check if atom exists works
       ansible.builtin.stat:
         path: /usr/bin/atom
       register: atom_test_one
