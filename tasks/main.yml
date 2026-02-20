@@ -18,7 +18,7 @@
   ansible.builtin.get_url:
     url: "{{ atom_package_url }}"
     dest: "/tmp/{{ atom_package }}"
-    mode: 0644
+    mode: "0644"
     # checksum: "{{ atom_checksum }}"
     validate_certs: false
   when:
@@ -39,8 +39,8 @@
   when:
     - ansible_pkg_mgr == "dnf"
 
-- name: Install atom rpm yum
-  ansible.builtin.yum:
+- name: Install atom rpm dnf
+  ansible.builtin.dnf:
     name: "/tmp/{{ atom_package }}"
     state: present
     disable_gpg_check: true
@@ -54,7 +54,6 @@
     disable_gpg_check: true
   when:
     - ansible_pkg_mgr == "zypper"
-
 # TODO: find a better way to install apm packages without failure
 # - name: install apm packages
 # command:

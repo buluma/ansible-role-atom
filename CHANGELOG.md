@@ -7,6 +7,8 @@
 **Closed issues:**
 
 - Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#31](https://github.com/buluma/ansible-role-atom/issues/31)
+- Update action [\#30](https://github.com/buluma/ansible-role-atom/issues/30)
+- rebuild action [\#29](https://github.com/buluma/ansible-role-atom/issues/29)
 - Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#25](https://github.com/buluma/ansible-role-atom/issues/25)
 - Update action [\#24](https://github.com/buluma/ansible-role-atom/issues/24)
 
