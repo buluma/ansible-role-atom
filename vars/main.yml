@@ -19,6 +19,5 @@ _atom_package:
     name: atom.x86_64.rpm
   yum: *rpmpackage
   zypper: *rpmpackage
-
 atom_package_url: '{{ _atom_package[ansible_pkg_mgr]["url"] }}'
 atom_package: "{{ _atom_package[ansible_pkg_mgr]['name'] }}"
