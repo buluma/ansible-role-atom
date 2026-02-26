@@ -46,9 +46,9 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 
 # What apm packages (https://atom.io/packages) to install.
 atom_apm_packages:
-- linter
-- platformio-ide-terminal
-- teletype
+  - linter
+  - platformio-ide-terminal
+  - teletype
 ```
 
 ## [Requirements](#requirements)
