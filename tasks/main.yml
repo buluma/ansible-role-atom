@@ -13,7 +13,7 @@
   when:
     - atom_requirements is defined
     - atom_requirements | length > 0
-    - ansible_facts.pkg_mgr == "apt"
+    - ansible_facts['pkg_mgr'] == "apt"
   ignore_errors: true
 
 - name: Pre-install libasound2t64 for Ubuntu 24.04+ compatibility
@@ -21,9 +21,9 @@
     name: libasound2t64
     state: present
   when:
-    - ansible_facts.pkg_mgr == "apt"
-    - ansible_facts.distribution == "Ubuntu"
-    - ansible_facts.distribution_version is version('24.04', '>=')
+    - ansible_facts['pkg_mgr'] == "apt"
+    - ansible_facts['distribution'] == "Ubuntu"
+    - ansible_facts['distribution_version'] is version('24.04', '>=')
   ignore_errors: true
 
 - name: Download atom
@@ -34,18 +34,18 @@
     # checksum: "{{ atom_checksum }}"
     validate_certs: false
   when:
-    - ansible_facts.pkg_mgr in [ "apt", "dnf", "dnf5", "yum", "zypper" ]
+    - ansible_facts['pkg_mgr'] in [ "apt", "dnf", "dnf5", "yum", "zypper" ]
 
 - name: Install atom deb
   ansible.builtin.apt:
     deb: "/tmp/{{ atom_package }}"
     state: present
   when:
-    - ansible_facts.pkg_mgr == "apt"
+    - ansible_facts['pkg_mgr'] == "apt"
 
 - name: Install atom rpm via dnf
   when:
-    - ansible_facts.pkg_mgr in [ "dnf", "dnf5" ]
+    - ansible_facts['pkg_mgr'] in [ "dnf", "dnf5" ]
   block:
     - name: Install atom rpm via dnf
       ansible.builtin.dnf:
@@ -63,7 +63,7 @@
 
 - name: Install atom rpm via yum
   when:
-    - ansible_facts.pkg_mgr == "yum"
+    - ansible_facts['pkg_mgr'] == "yum"
   block:
     - name: Install atom rpm via yum
       ansible.builtin.dnf:
@@ -85,7 +85,7 @@
     state: present
     disable_gpg_check: true
   when:
-    - ansible_facts.pkg_mgr == "zypper"
+    - ansible_facts['pkg_mgr'] == "zypper"
 # TODO: find a better way to install apm packages without failure
 # - name: install apm packages
 # command:
