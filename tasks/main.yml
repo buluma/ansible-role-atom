@@ -12,7 +12,7 @@
     state: present
   when:
     - atom_requirements is defined
-    - ansible_pkg_mgr == "apt"
+    - ansible_facts.pkg_mgr == "apt"
 
 - name: Download atom
   ansible.builtin.get_url:
@@ -22,14 +22,14 @@
     # checksum: "{{ atom_checksum }}"
     validate_certs: false
   when:
-    - ansible_pkg_mgr in [ "apt", "dnf", "yum", "zypper" ]
+    - ansible_facts.pkg_mgr in [ "apt", "dnf", "yum", "zypper" ]
 
 - name: Install atom deb
   ansible.builtin.apt:
     deb: "/tmp/{{ atom_package }}"
     state: present
   when:
-    - ansible_pkg_mgr == "apt"
+    - ansible_facts.pkg_mgr == "apt"
 
 - name: Install atom rpm dnf
   ansible.builtin.dnf:
@@ -37,7 +37,7 @@
     state: present
     disable_gpg_check: true
   when:
-    - ansible_pkg_mgr == "dnf"
+    - ansible_facts.pkg_mgr == "dnf"
 
 - name: Install atom rpm dnf
   ansible.builtin.dnf:
@@ -45,7 +45,7 @@
     state: present
     disable_gpg_check: true
   when:
-    - ansible_pkg_mgr == "yum"
+    - ansible_facts.pkg_mgr == "yum"
 
 - name: Install atom rpm zypper
   community.general.zypper:
@@ -53,7 +53,7 @@
     state: present
     disable_gpg_check: true
   when:
-    - ansible_pkg_mgr == "zypper"
+    - ansible_facts.pkg_mgr == "zypper"
 # TODO: find a better way to install apm packages without failure
 # - name: install apm packages
 # command:

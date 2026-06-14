@@ -7,7 +7,7 @@ _atom_requirements:
     - apt-transport-https
     - wget
 
-atom_requirements: "{{ _atom_requirements[ansible_pkg_mgr] | default(omit) }}"
+atom_requirements: "{{ _atom_requirements[ansible_facts.pkg_mgr] | default(omit) }}"
 
 _atom_package:
   apt:
@@ -19,5 +19,5 @@ _atom_package:
     name: atom.x86_64.rpm
   yum: *rpmpackage
   zypper: *rpmpackage
-atom_package_url: '{{ _atom_package[ansible_pkg_mgr]["url"] }}'
-atom_package: "{{ _atom_package[ansible_pkg_mgr]['name'] }}"
+atom_package_url: '{{ _atom_package[ansible_facts.pkg_mgr]["url"] }}'
+atom_package: "{{ _atom_package[ansible_facts.pkg_mgr]['name'] }}"
