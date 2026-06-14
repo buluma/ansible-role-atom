@@ -12,7 +12,19 @@
     state: present
   when:
     - atom_requirements is defined
+    - atom_requirements | length > 0
     - ansible_facts.pkg_mgr == "apt"
+  ignore_errors: true
+
+- name: Pre-install libasound2t64 for Ubuntu 24.04+ compatibility
+  ansible.builtin.apt:
+    name: libasound2t64
+    state: present
+  when:
+    - ansible_facts.pkg_mgr == "apt"
+    - ansible_facts.distribution == "Ubuntu"
+    - ansible_facts.distribution_version is version('24.04', '>=')
+  ignore_errors: true
 
 - name: Download atom
   ansible.builtin.get_url:
@@ -22,7 +34,7 @@
     # checksum: "{{ atom_checksum }}"
     validate_certs: false
   when:
-    - ansible_facts.pkg_mgr in [ "apt", "dnf", "yum", "zypper" ]
+    - ansible_facts.pkg_mgr in [ "apt", "dnf", "dnf5", "yum", "zypper" ]
 
 - name: Install atom deb
   ansible.builtin.apt:
@@ -31,23 +43,43 @@
   when:
     - ansible_facts.pkg_mgr == "apt"
 
-- name: Install atom rpm dnf
-  ansible.builtin.dnf:
-    name: "/tmp/{{ atom_package }}"
-    state: present
-    disable_gpg_check: true
+- name: Install atom rpm via dnf
   when:
-    - ansible_facts.pkg_mgr == "dnf"
+    - ansible_facts.pkg_mgr in [ "dnf", "dnf5" ]
+  block:
+    - name: Install atom rpm via dnf
+      ansible.builtin.dnf:
+        name: "/tmp/{{ atom_package }}"
+        state: present
+        disable_gpg_check: true
+  rescue:
+    - name: Install atom rpm with --nodeps (fallback for missing LSB)
+      ansible.builtin.command:
+        cmd: "rpm -ivh --nodeps /tmp/{{ atom_package }}"
+      args:
+        creates: /usr/bin/atom
+      register: rpm_install
+      changed_when: '"Preparing..." in rpm_install.stdout'
 
-- name: Install atom rpm dnf
-  ansible.builtin.dnf:
-    name: "/tmp/{{ atom_package }}"
-    state: present
-    disable_gpg_check: true
+- name: Install atom rpm via yum
   when:
     - ansible_facts.pkg_mgr == "yum"
+  block:
+    - name: Install atom rpm via yum
+      ansible.builtin.dnf:
+        name: "/tmp/{{ atom_package }}"
+        state: present
+        disable_gpg_check: true
+  rescue:
+    - name: Install atom rpm with --nodeps (fallback for missing LSB)
+      ansible.builtin.command:
+        cmd: "rpm -ivh --nodeps /tmp/{{ atom_package }}"
+      args:
+        creates: /usr/bin/atom
+      register: rpm_install
+      changed_when: '"Preparing..." in rpm_install.stdout'
 
-- name: Install atom rpm zypper
+- name: Install atom rpm via zypper
   community.general.zypper:
     name: "/tmp/{{ atom_package }}"
     state: present

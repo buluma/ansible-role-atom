@@ -3,9 +3,8 @@
 
 _atom_requirements:
   apt:
-    - software-properties-common
-    - apt-transport-https
     - wget
+  dnf5: []
 
 atom_requirements: "{{ _atom_requirements[ansible_facts.pkg_mgr] | default(omit) }}"
 
@@ -15,8 +14,8 @@ _atom_package:
     name: atom-amd64.deb
   dnf: &rpmpackage
     url: "https://github.com/atom/atom/releases/download/v1.60.0/atom.x86_64.rpm"
-    # TODO: Set version based var
     name: atom.x86_64.rpm
+  dnf5: *rpmpackage
   yum: *rpmpackage
   zypper: *rpmpackage
 atom_package_url: '{{ _atom_package[ansible_facts.pkg_mgr]["url"] }}'
