@@ -6,7 +6,7 @@ _atom_requirements:
     - wget
   dnf5: []
 
-atom_requirements: "{{ _atom_requirements[ansible_facts['pkg_mgr']] | default(omit) }}"
+atom_requirements: "{{ _atom_requirements[ansible_facts['pkg_mgr']] | default([]) }}"
 
 _atom_package:
   apt:
